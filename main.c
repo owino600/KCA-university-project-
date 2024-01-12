@@ -6,7 +6,7 @@ int main(void)
     char email[100];
     int number;
     Details* details;
-    details = enter_details(name, email, number);
+    details = enter_details(name, number, email);
     if (details == NULL)
     {
         printf("memory not allocated");
