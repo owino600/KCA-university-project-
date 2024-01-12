@@ -9,7 +9,8 @@ int main(void)
     details = enter_details(name, number, email);
     if (details == NULL)
     {
-        printf("memory not allocated");
+        printf("memory not allocated\n");
+        return (1);
     }
     printf("enter name: ");
     printf("enter email: ");
