@@ -9,8 +9,9 @@ typedef struct Details
 {
     char name[100];
     int number;
-    char *email;
+    char email[100];
+    struct Details *next;
 }Details;
 
-Details* enter_details(char name[], int number, char *email);
+Details* enter_details(const char* name, int number, char *email);
 #endif

@@ -1,14 +1,18 @@
-#include "main.h"
-Details* enter_details(char name[], int number, char *email)
+#include "project.h"
+Details* enter_details(const char* name, int number, char *email)
 {
     Details *newdetails;
-    newdetails = malloc(sizeof(Details));
+    newdetails = (Details *)malloc(sizeof(Details));
     if (newdetails == NULL)
     {
         return (NULL);
     }
-    newdetails->email = strdup(email);
+    strcpy(newdetails->name, name);
+    strcpy(newdetails->email, email);
+    //newdetails->name = strdup(name);
+    //newdetails->email = strdup(email);
     newdetails->number = number;
-    free (newdetails);
+    newdetails->next = NULL;
+    // free (newdetails);
     return (0);
 }
