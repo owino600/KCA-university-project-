@@ -9,7 +9,7 @@ int main(void)
     char day[3];
     char gender[20];
     int choice;
-    char name;
+    char name[100];
     char email[100];
     int number;
     Details* details;
@@ -27,7 +27,7 @@ int main(void)
 
     while (1)
     {
-        choice = submit_update_Delete();
+        choice = submit_update_delete();
         if (choice == 1)
         {
             sleep(2);
