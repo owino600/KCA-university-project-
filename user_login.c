@@ -14,6 +14,8 @@ Details* enter_details(const char* name, int number, char *email)
     //newdetails->email = strdup(email);
     newdetails->number = number;
     newdetails->next = NULL;
+    newdetails->next = list;
+    list = newdetails;
     // free (newdetails);
-    return (0);
+    return (list);
 }
