@@ -2,7 +2,14 @@
 
 int main(void)
 {
-    char name[100];
+    char firstname[100];
+    char lastname[100];
+    char year[5];
+    char month[3];
+    char day[3];
+    char gender[20];
+    int choice;
+    char name;
     char email[100];
     int number;
     Details* details;
@@ -17,5 +24,27 @@ int main(void)
     printf("enter number: ");
 
     free(details);
+
+    while (1)
+    {
+        choice = submit_update_Delete();
+        if (choice == 1)
+        {
+            sleep(2);
+            break;
+        }
+        else if (choice == 2)
+        {
+            sleep(2);
+            printf("please choose item to delete");
+            continue;
+        }
+        else
+        {
+            printf("Invalid Choice\n");
+            continue;
+        }
+        break;
+    }
     return (0);
 }

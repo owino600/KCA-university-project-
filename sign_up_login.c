@@ -71,13 +71,10 @@ int submit_update_delete (void)
     else if (choice == 2)
     {
         printf("Please Update\n");
-        
-
     }
     else if (choice == 3)
     {
         printf("Choose data to delete");
     }
-
     printf("Invalid input");
 }
