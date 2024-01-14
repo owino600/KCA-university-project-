@@ -4,6 +4,7 @@ int main(void)
 {
     char firstname[100];
     char lastname[100];
+    char middlename[100];
     char year[5];
     char month[3];
     char day[3];
@@ -27,6 +28,8 @@ int main(void)
 
     while (1)
     {
+         username(firstname, lastname, middlename);
+         birthdate(day, month, year);
         choice = submit_update_delete();
         if (choice == 1)
         {
