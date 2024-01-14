@@ -1,11 +1,11 @@
 #include "project.h"
 char username(char *firstname, char *lastname, char *middlename)
 {
-    printf("Enter First Name: ");
+    printf("\033[1mEnter First Name: \033[0m");
     fgets(firstname, sizeof(firstname), stdin);
     firstname[strcspn(firstname, "\n")] = '\0';
 
-    printf("Enter Last Name: ");
+    printf("\033[1mEnter Last Name: \033[0m");
     fgets(lastname, sizeof(lastname), stdin);
     lastname[strcspn(lastname, "\n")] = '\0';
 
@@ -13,18 +13,18 @@ char username(char *firstname, char *lastname, char *middlename)
     fgets(middlename, sizeof(middlename), stdin);
     middlename[strcspn(middlename, "\n")] = '\0';
 }
-void birthdate(char *day, char *month, char *year)
+void birthdate(char *date, char *month, char *year)
 {
     while (1)
     {
-        printf("Day: ");
-        scanf("%s", day);
-        if (atoi(day) < 1 || atoi(day) > 31)
+        printf("Date: ");
+        scanf("%s", date);
+        if (atoi(date) < 1 || atoi(date) > 31)
         {
-            printf("Day Error\n");
+            printf("Date Error\n");
             continue;
         }
-        *day = atoi(day);
+        *date = atoi(date);
         break;
     }
     while (1)

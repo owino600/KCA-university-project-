@@ -1,6 +1,7 @@
 #include "project.h"
 Details* enter_details(const char* name, int number, char *email)
 {
+    Details *list = NULL;
     Details *newdetails;
     newdetails = (Details *)malloc(sizeof(Details));
     if (newdetails == NULL)
