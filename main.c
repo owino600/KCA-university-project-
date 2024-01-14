@@ -30,17 +30,24 @@ int main(void)
     {
          username(firstname, lastname, middlename);
          birthdate(day, month, year);
+
         choice = submit_update_delete();
         if (choice == 1)
         {
-            sleep(2);
+            sleep(1.5);
             break;
         }
         else if (choice == 2)
         {
-            sleep(2);
-            printf("please choose item to delete");
-            continue;
+            sleep(1.5);
+            printf("\nplease choose item to update\n");
+            break;
+        }
+        else if (choice == 3)
+        {
+            sleep(1.5);
+            printf("\nplease choose item to delete\n");
+            break;
         }
         else
         {
@@ -49,5 +56,6 @@ int main(void)
         }
         break;
     }
+    printf("Details submitted.\n");
     return (0);
 }

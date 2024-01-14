@@ -21,10 +21,13 @@ void birthdate(char *date, char *month, char *year)
         scanf("%s", date);
         if (atoi(date) < 1 || atoi(date) > 31)
         {
-            printf("Date Error\n");
+            fprintf(stderr, "Invalid date!\n");
             continue;
         }
-        *date = atoi(date);
+        else
+        {
+            *date = atoi(date);
+        }
         break;
     }
     while (1)
@@ -33,10 +36,13 @@ void birthdate(char *date, char *month, char *year)
         scanf("%s", month);
         if (atoi(month) < 1 || atoi(month) > 12)
         {
-            printf("Month Error\n");
+            fprintf(stderr, "Invalid month!\n");
             continue;
         }
-        *month = atoi(month);
+        else
+        {
+            *month = atoi(month);
+        }
         break;
     }
     while (1)
@@ -45,10 +51,13 @@ void birthdate(char *date, char *month, char *year)
         scanf("%s", year);
         if (atoi(year) < 1940 || atoi(year) > 2050)
         {
-            printf("year Error\n");
+            fprintf(stderr, "Invalid year!\n");
             continue;
         }
-        *year = atoi(year);
+        else
+        {
+            *year = atoi(year);
+        }
         break;
     }
 }
@@ -56,25 +65,14 @@ int submit_update_delete (void)
 {
     int choice;
     char username;
-    
-    printf("\n 1)Submit: ");
-    printf("\n 2)Update: ");
-    printf("\n 3)Delete: ");
-    
-    printf("Please choose action:\n");
-    scanf("%d", &choice);
 
-    if (choice == 1)
-    {
-        printf("Form Submited\n");
-    }
-    else if (choice == 2)
-    {
-        printf("Please Update\n");
-    }
-    else if (choice == 3)
-    {
-        printf("Choose data to delete");
-    }
-    printf("Invalid input");
+    
+    printf("\n 1)Submit:\n");
+    printf("\n 2)Update:\n");
+    printf("\n 3)Delete:\n");
+    
+    printf("\nPlease choose action:\n");
+    scanf("%d", &choice);
+    return (choice);
+    
 }
