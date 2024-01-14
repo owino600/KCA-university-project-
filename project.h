@@ -14,4 +14,7 @@ typedef struct Details
 }Details;
 
 Details* enter_details(const char* name, int number, char *email);
+char username(char *firstname, char *lastname, char *middlename);
+void birthdate(char *day, char *month, char *year);
+int submit_update_delete (void);
 #endif
