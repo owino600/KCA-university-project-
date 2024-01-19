@@ -46,17 +46,17 @@ int main(void)
             printf("\n 2:) BirthDate: \n");
             printf("\n 3:) ALL: \n");
             scanf("%d", &choice);
-            while (choice == 1)
+            if (choice == 1)
             {
                 username(firstname, lastname, middlename);
                 break;
             }
-            while (choice == 2)
+            else if (choice == 2)
             {
                 birthdate(day, month, year);
                 break;
             }
-            while (choice == 3)
+            else if (choice == 3)
             {
                 username(firstname, lastname, middlename);
                 birthdate(day, month, year);
