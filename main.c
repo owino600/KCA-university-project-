@@ -13,19 +13,8 @@ int main(void)
     char name[100];
     char email[100];
     int number;
-    //Details* details;
-    //details = enter_details(name, number, email);
-    //if (details == NULL)
-    //{
-     //   printf("memory not allocated\n");
-      //  return (1);
-    //}
-    //printf("enter name: ");
-    //printf("enter email: ");
-    //printf("enter number: ");
-
-    //free(details);
-
+    Details* newdetails;
+    
     while (1)
     {
          username(firstname, lastname, middlename);
@@ -77,6 +66,26 @@ int main(void)
         }
         break;
     }
-    
+    newdetails = enter_details(name, number, email);
+    if (newdetails == NULL)
+    {
+       printf("memory allocation failed!\n");
+       return (1);
+    }
+    while (choice == 1)
+    {
+        printf("Choose Category");
+        printf("\n 1) Seller:");
+        printf("\n 2) Customer:");
+        scanf("%d", &choice);
+        break;
+    }
+    printf("enter name: ");
+    scanf("%s", newdetails->name);
+    printf("enter email: ");
+    scanf("%s", newdetails->email);
+    printf("enter number: ");
+    scanf("%i", &(newdetails->number));
+    free(newdetails);
     return (0);
 }
